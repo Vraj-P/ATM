@@ -33,6 +33,11 @@ void account::createAccount(){
     std::cout << "Enter an Account Type (C/S): ";
     std::cin >> type;
     type = toupper(type);
+    if(type != 'C' || type != 'S'){
+        std::cout << "That is Not a Valid Input Please Enter a Account Type (C/S): ";
+        std::cin >> type;
+        type = toupper(type);
+    }
     std::cout << "Enter the Amount You Would Like to Deposit: ";
     std::cin >> balance;
     std::cout << "\nAccount Created!";
